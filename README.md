@@ -1,7 +1,6 @@
 # TẠT LON! — Traditional Slipper-Throwing Game
 
-A browser-based prototype inspired by the Vietnamese traditional game **Tạt Lon**. The interface and source-code comments are in English; the game title remains **TẠT LON!**.
-
+A browser-based prototype inspired by the Vietnamese traditional game **Tạt Lon**. 
 ## Project files
 
 ```text
