@@ -33,7 +33,7 @@ README.md    Gameplay and setup documentation
 - **Guard:** Restores the can to its designated circle when needed and attempts to tag the Thrower under the conditions below.
 - The human player controls one role; the AI controls the other. A successful tag swaps the roles and starts another round.
 
-## Gameplay rules (current corrected version)
+## Gameplay rules
 
 1. **Prepare:** The Thrower begins behind the throwing/safety line with the slipper. The can begins standing in its circle.
 2. **Throw:** Aim and throw. The Thrower can move as soon as the slipper is in flight. Another throw is not available until the slipper has been retrieved and the Thrower has returned to safety.
