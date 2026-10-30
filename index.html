@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TẠT LON! — Backyard Can Knockdown</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <div class="brand"><div class="logo">🩴</div><div><div class="subtitle">A VIETNAMESE TRADITIONAL GAME</div><h1>TẠT LON!</h1></div></div>
+      <div class="tag">🌤️ A trip down memory lane</div>
+    </header>
+    <div class="layout">
+      <section class="card">
+        <div class="game-top"><span>🏡 NEIGHBORHOOD PLAYGROUND</span><span><span class="live">● LIVE</span> Round <span id="round">1</span></span></div>
+        <div class="playfield" id="field">
+          <canvas id="game" width="800" height="490" aria-label="Playfield with a moving player, slipper, can, and chasing guard"></canvas>
+          <div class="note" id="hint">Move to choose your throwing position.</div>
+          <div class="phase" id="phase">POSITIONING</div>
+          <div class="touch-pad" aria-label="Touch movement controls">
+            <button data-move="up" aria-label="Move up">▲</button>
+            <div><button data-move="left" aria-label="Move left">◀</button><button data-move="down" aria-label="Move down">▼</button><button data-move="right" aria-label="Move right">▶</button></div>
+          </div>
+        </div>
+        <div class="game-bottom">
+          <label class="control">↔ Aim <input type="range" id="angle" min="-65" max="65" value="0"><span id="angleVal">0°</span></label>
+          <label class="control">💪 Power <input type="range" id="power" min="20" max="100" value="70"><span id="powerVal">70%</span></label>
+          <button class="primary" id="throwBtn">🩴 THROW!</button>
+          <button class="secondary" id="resetBtn">↻ Restart</button>
+        </div>
+      </section>
+      <aside class="aside">
+        <section class="card panel"><h2>🏆 Scoreboard</h2><div class="score"><div class="stat"><strong id="score">0</strong><span>🎯 Cans knocked down</span></div><div class="stat"><strong id="attempts">0</strong><span>🩴 Throws</span></div></div><div class="role-stats"><span>Your role: <b id="role">THROWER</b></span><span>Role swaps: <b id="swaps">0</b></span></div><div class="message" role="status" aria-live="polite" id="message">Choose your spot, aim, and throw!</div></section>
+        <section class="card panel"><h2>📜 How to play</h2><ol class="rules">
+          <li>Move with <b>W/A/S/D</b> or <b>arrow keys</b>. As Thrower, choose a spot behind the line.</li>
+          <li>Aim, adjust power, then press <b>Space</b> or <b>THROW!</b>. You can move while the slipper flies.</li>
+          <li><b>Can stays upright:</b> The Thrower may retrieve the slipper. The Guard must tag the Thrower holding it outside the safe area to swap roles.</li>
+          <li><b>Can falls:</b> The Thrower may retrieve the slipper. The Guard must return the fallen can to the circle before tagging anyone.</li>
+          <li>After resetting the can, the Guard can tag the Thrower <b>only while the Thrower holds the slipper outside the safe area</b>. Touching a slipper on the ground never swaps roles.</li>
+          <li>If the Thrower returns behind the safe line with the slipper, they are safe and may throw again.</li>
+          <li>On a <b>role swap</b>, you play the other role and the AI takes over your previous role. The next round starts automatically.</li>
+        </ol><div class="mini">On mobile, use the directional pad in the field. As Guard, tag the Thrower carrying the slipper; if the can falls, restore it first.</div></section>
+      </aside>
+    </div>
+    <footer class="footer">Inspired by childhood afternoons playing can knockdown with friends</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
